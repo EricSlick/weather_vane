@@ -25,7 +25,32 @@ A simple app for tracking the weather.
 
 * ...
 
-Assignment Build a small Multi-Location Weather Forecasting Application
+## Dev Log
+I chose to create a timeline to record my progress throughout this assignment. I'm 
+also treating the initial discovery/research/learning as if it was a spike and will do it
+on my free time till Friday. I'll build the app formally on the weekend.
+
+## Research
+Wed, Nov 9:
+Initial App Setup: Using postgres as an older version is already installed.
+
+Weather Data Source: Time boxed 30 minutes.
+
+Since this was something I'd never done, decided to immediately find a source for
+weather data. I Looked at a few gems, but the ones seemed old and out of date. There seems
+to be a lot of sources for weather data and I didn't research them all, but settled on 
+https://www.visualcrossing.com. I know how I want to set up the API interface and
+am confident that a different source will be easy to add/replace.
+    * simple signup
+    * rest api
+    * active
+
+Digging into learning more about turbo/stimulus. Nice that rails seems to have it already
+installed.
+
+
+## Assignment/Requirements
+Build a small Multi-Location Weather Forecasting Application
 
 Using TDD and Ruby on Rails build a simple application that allows a user to:
 * Create multiple locations by (IP Address and/or text address)
