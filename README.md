@@ -30,7 +30,7 @@ I chose to create a timeline to record my progress throughout this assignment. I
 also treating the initial discovery/research/learning as if it was a spike and will do it
 on my free time till Friday. I'll build the app formally on the weekend.
 
-## Research
+## Research (through Friday) 
 **Wed, Nov 9**:
 Initial App Setup: Using postgres as an older version is already installed.
 
@@ -50,7 +50,7 @@ installed. Main source, the tutorial at https://www.hotrails.dev/turbo-rails.
    
 ## Implementation
 **Sat, Nov 12**
-### Design
+### Design (15 minutes)
 
 **Home Page**
   * List of Locations
