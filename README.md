@@ -31,7 +31,7 @@ also treating the initial discovery/research/learning as if it was a spike and w
 on my free time till Friday. I'll build the app formally on the weekend.
 
 ## Research
-Wed, Nov 9:
+**Wed, Nov 9**:
 Initial App Setup: Using postgres as an older version is already installed.
 
 Weather Data Source: Time boxed 30 minutes.
@@ -46,7 +46,50 @@ am confident that a different source will be easy to add/replace.
     * active
 
 Digging into learning more about turbo/stimulus. Nice that rails seems to have it already
-installed.
+installed. Main source, the tutorial at https://www.hotrails.dev/turbo-rails.
+   
+## Implementation
+**Sat, Nov 12**
+### Design
+
+**Home Page**
+  * List of Locations
+  * CRUD operations
+
+**UI Approximation**
+  
+    Weather Vane
+     
+    [         ] New Location
+    Location 1 <edit|delete>
+    Location 2 <edit|delete>
+    Location 3 <edit|delete>
+
+**Show Page**
+  * Clicking on a location shows forecast details about that location
+    * 7 day forecast
+      * each day is listed horizontally next to each other
+      * High/Low highlighted for each day
+      * bonus 1 show chart of high/lows for the 7 days
+      * possible extras
+        * show hourly temperatures for each day
+        * show weather conditions for the high, low and hourly
+          * start with text
+          * replace text with images
+
+**UI Approximation**
+
+    Seven Day Forecast for <location>
+    
+               Day1  | Day2  | Day3 | ...
+    Conditions <img>   <img>   <img>
+    High       High# | High# | High#| ...
+    Low        Low#  | Low#  | Low# | ...
+              [bonus 1 chart here showing the high/low for each day] 
+    <------- extra 4 hourly temps bonus---------->
+    Hour1      Temp# | Temp# | Temp#| ...  
+    Hour2      Temp# | Temp# | Temp#| ...  
+    Hour3      Temp# | Temp# | Temp#| ...  
 
 
 ## Assignment/Requirements
