@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @location %>
-
-<div>
-  <%= link_to "Edit this location", edit_location_path(@location) %> |
-  <%= link_to "Back to locations", locations_path %>
-
-  <%= button_to "Destroy this location", @location, method: :delete %>
-</div>
+<main class="container">
+  <%= link_to sanitize("&larr; Back to Locations"), locations_path %>
+  <div class="header">
+    <h1>
+      <%= @location.location %>
+    </h1>
+  </div>
+  <div class="">
+    <%= render partial: 'highs_and_lows', locals: {location_logic: @location_logic} %>
+  </div>
+</main>

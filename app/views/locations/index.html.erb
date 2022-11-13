@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="header">
+    <h2>Locations</h2>
+    <%= link_to "New location",
+                new_location_path,
+                class: "btn btn--primary",
+                data: { turbo_frame: dom_id(Location.new) }
+    %>
 
-<h1>Locations</h1>
+    <%= turbo_frame_tag Location.new %>
 
-<div id="locations">
-  <% @locations.each do |location| %>
-    <%= render location %>
-    <p>
-      <%= link_to "Show this location", location %>
-    </p>
-  <% end %>
+    <%= turbo_frame_tag "locations" do %>
+      <%#= render "locations/empty_state" %>
+      <%= render @locations %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New location", new_location_path %>

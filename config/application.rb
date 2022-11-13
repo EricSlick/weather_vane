@@ -33,5 +33,10 @@ module WeatherVane
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # SASS
+    config.sass.preferred_syntax = :sass
+    config.sass.line_comments = false
+    config.sass.cache = false
   end
 end

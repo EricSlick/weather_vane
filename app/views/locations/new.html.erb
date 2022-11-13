@@ -1,9 +1,11 @@
-<h1>New location</h1>
+<main class="container">
+  <%= link_to sanitize("&larr; Back to quotes"), locations_path %>
 
-<%= render "form", location: @location %>
+  <div class="header">
+    <h1>New Location</h1>
+  </div>
 
-<br>
-
-<div>
-  <%= link_to "Back to locations", locations_path %>
-</div>
+  <%= turbo_frame_tag @location do %>
+    <%= render "form", location: @location %>
+  <% end %>
+</main>

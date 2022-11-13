@@ -1,6 +1,6 @@
 <%= form_with(model: location) do |form| %>
   <% if location.errors.any? %>
-    <div style="color: red">
+    <div>
       <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
 
       <ul>
@@ -11,12 +11,19 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="form location">
+    <% if location.errors.any? %>
+      <div class="error-message">
+        <%= quote.errors.full_messages.to_sentence.capitalize %>
+      </div>
+    <% end %>
+
     <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+    <%= form.text_field :location, autofocus: true %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%#= link_to "Cancel", quotes_path, class: "btn btn--light" %>
+    <%= form.submit class: "btn btn--secondary" %>
   </div>
 <% end %>

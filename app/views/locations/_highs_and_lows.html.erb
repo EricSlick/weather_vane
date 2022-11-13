@@ -1,0 +1,10 @@
+<div class="high-low-grid">
+  
+  <% location_logic.forecast[0..6].each do |day_hash| %>
+    <div>High: <%= location_logic.high(day_hash) %></div>
+    <div>Low: <%= location_logic.low(day_hash) %></div>
+  <% end; %>
+</div>
+<div>
+  <%= line_chart location_logic.highs_and_lows, colors: ["#b00", "#00b"]%>
+</div>

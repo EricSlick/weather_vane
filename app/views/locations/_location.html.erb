@@ -1,7 +1,16 @@
-<div id="<%= dom_id location %>">
-  <p>
-    <strong>Location:</strong>
-    <%= location.location %>
-  </p>
-
-</div>
+<%= turbo_frame_tag location do %>
+  <div class="location">
+    <%= link_to location.location,
+                location_path(location),
+                data: { turbo_frame: "_top" } %>
+    <div class="location__actions">
+      <%= button_to "Delete",
+                    location_path(location),
+                    method: :delete,
+                    class: "btn btn--light" %>
+      <%= link_to "Edit",
+                  edit_location_path(location),
+                  class: "btn btn--light" %>
+    </div>
+  </div>
+<% end %>

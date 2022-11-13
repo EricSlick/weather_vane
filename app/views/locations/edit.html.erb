@@ -1,10 +1,22 @@
-<h1>Editing location</h1>
+<!--<h1>Editing location</h1>-->
 
-<%= render "form", location: @location %>
+<%#= render "form", location: @location %>
 
-<br>
+<!--<br>-->
 
-<div>
-  <%= link_to "Show this location", @location %> |
-  <%= link_to "Back to locations", locations_path %>
-</div>
+<!--<div>-->
+<!--  <%#= link_to "Show this location", @location %> |-->
+  <%#= link_to "Back to locations", locations_path %>
+<!--</div>-->
+
+<main class="container">
+  <%= link_to sanitize("&larr; Back to location"), location_path(@location) %>
+
+  <div class="header">
+    <h1>Edit Location</h1>
+  </div>
+
+  <%= turbo_frame_tag @location do %>
+    <%= render "form", location: @location %>
+  <% end %>
+</main>
