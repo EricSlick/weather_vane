@@ -18,11 +18,15 @@ RSpec.describe "/locations", type: :request do
   # Location. As you add validations to Location, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      location: 'Chicago, IL'
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      location: nil
+    }
   }
 
   describe "GET /index" do

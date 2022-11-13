@@ -9,7 +9,8 @@ module Api
       end
 
       def fetch_forecast_for(location)
-        HTTParty.get(@forecast_base_url, query: query_params(location))
+        response = HTTParty.get(@forecast_base_url, query: query_params(location))
+        convert_response_to_hash(response)
       end
 
       private
@@ -23,6 +24,10 @@ module Api
           'shortColumnNames': 'false',
           'contentType': 'csv'
         }
+      end
+
+      def convert_response_to_hash(response)
+        CSV.parse(response.body, headers: :first_row).map(&:to_h)
       end
     end
   end

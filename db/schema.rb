@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_12_205923) do
   enable_extension "plpgsql"
 
   create_table "locations", force: :cascade do |t|
-    t.string "location"
+    t.string "location", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

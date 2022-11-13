@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Locations Management" do
   before do
-    driven_by(:rack_test)
+    driven_by(:selenium_chrome_headless)
   end
 
   it "enables me to create locations" do
@@ -13,4 +13,5 @@ RSpec.describe "Locations Management" do
 
     expect(page).to have_text("Location was successfully created.")
   end
+  
 end
