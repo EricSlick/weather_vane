@@ -5,6 +5,9 @@ RSpec.describe "locations/show", type: :view do
     assign(:location, Location.create!(
       location: "Location"
     ))
+    assign(:location_logic, LocationsLogic.new(
+      location: "Chicago, IL"
+    ))
   end
 
   it "renders attributes in <p>" do

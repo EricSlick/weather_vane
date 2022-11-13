@@ -14,7 +14,7 @@
   <div class="form location">
     <% if location.errors.any? %>
       <div class="error-message">
-        <%= quote.errors.full_messages.to_sentence.capitalize %>
+        <%= location.errors.full_messages.to_sentence.capitalize %>
       </div>
     <% end %>
 
@@ -23,7 +23,6 @@
   </div>
 
   <div>
-    <%#= link_to "Cancel", quotes_path, class: "btn btn--light" %>
     <%= form.submit class: "btn btn--secondary" %>
   </div>
 <% end %>

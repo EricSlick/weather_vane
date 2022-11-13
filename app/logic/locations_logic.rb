@@ -3,10 +3,10 @@ class LocationsLogic
 
   def initialize(location: )
     @location = location
-    forecast_for(location)
+    fetch_forecast
   end
-  def forecast_for(location)
-    @forecast = Api::WeatherVane.new.get_forecast_for(location)
+  def fetch_forecast(location = @location)
+    @forecast ||= Api::WeatherVane.new.get_forecast_for(location)
   end
 
   # "Address"=>"Chicago",
