@@ -17,7 +17,7 @@ module Api
 
       def query_params(location)
         {
-          'key': Rails.application.credentials.visual_crossing[:key],
+          'key': 'MKMN8EGBELXJ2WTY9JKKA8AM5', # Rails.application.credentials.visual_crossing[:key],
           'locations': location,
           'aggregateHours': 24,
           'unitGroup': 'us',
