@@ -114,3 +114,4 @@ If looking for a tutorial to get you up to speed on the current state of Stimulu
 * Share source code through Github with a README that documents how use your program
 * Demonstrate ability to use unit and system tests with a strategy for handling data coming from 3rd party APIs
 * We typically use RSpec for our tests, system tests in RSpec
+...
